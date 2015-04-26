@@ -12,7 +12,7 @@ keywords:
 script: |
   echo 'Synchronizing References in apt-get...'
   sudo apt-get update
-  pip install container-transform
-  pip install awscli
+  sudo pip install container-transform
+  sudo pip install awscli
   echo 'Synchronizing System Time...'
   sudo ntpdate ntp.ubuntu.com
