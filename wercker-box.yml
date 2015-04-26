@@ -1,0 +1,18 @@
+name: install-container-transform
+type: main
+version: 0.0.1
+inherits: wercker/python@1.1.0
+platform: ubuntu@12.04
+description: install container transform for deploying ECS by docker-compose.yml
+keywords:
+  - AWS
+  - ECS
+  - docker-compose
+  - container-transform
+script: |
+  echo 'Synchronizing References in apt-get...'
+  sudo apt-get update
+  pip install container-transform
+  pip install awscli
+  echo 'Synchronizing System Time...'
+  sudo ntpdate ntp.ubuntu.com
